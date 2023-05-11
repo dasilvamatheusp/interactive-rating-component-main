@@ -29,7 +29,7 @@ body, html {
     align-items: center;
 }
 
-.main-container > .rating-state{
+.rating-hidden {
     display: none !important;
 }
 
@@ -40,20 +40,20 @@ body, html {
     border-radius: 20px;
     padding: 24px 24px;
     height: 375px;
-    width: 340px;
+    width: 343px;
     gap: 15px;
 }
 .main-container > .rating-state > .star-icon {
-    height: 43px;
-    width: 43px;
+    height: 56px;
+    width: 42px;
     overflow: hidden;
-    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--Dark-Blue);
     border-radius: 50%;
 }
+
 .main-container > .rating-state > h1 {
     color: var(--White);
     font-size: 27px;
@@ -91,6 +91,20 @@ body, html {
     cursor: pointer;
     transition: all ease-in-out .3s;
 }
+.selected {
+    background-color: var(--Orange) !important;
+    color: var(--White) !important;
+}
+.main-container > .rating-state > .rating > label.default {
+    background-color: var(--Medium-Grey);
+    color: white;
+}
+.main-container > .rating-state > .rating > label.default:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
 .main-container > .rating-state > button {
     color: var(--White);
     font-weight: 400;
@@ -108,7 +122,9 @@ body, html {
 
 }
 
-
+.hid {
+    display: none !important;
+}
 
 .thank-you-state {
     background-color: var(--container);
@@ -118,14 +134,14 @@ body, html {
     gap: 20px;
     flex-direction: column;
     border-radius: 20px;
-    padding: 24px 24px;
+    padding: 24px 24px 30px 24px;
     height: 375px;
-    width: 340px;
+    width: 343px;
 }
-.thank-you-state > .selected-radio{
+.thank-you-state > .result{
     background-color: var(--Dark-Blue);
     color: var(--Orange);
-    padding-top: 2px;
+    padding-top: 5px;
     margin-bottom: 5px;
     display: flex;
     justify-content: center;
@@ -134,9 +150,11 @@ body, html {
     height: 33px;
     width: 180px;
 }
+
 .thank-you-state > h1 {
     color: var(--White);
     font-size: 26px;
+    display: flex;
 }
 .thank-you-state > .thank-you-description {
     color: var(--Light-Grey);
