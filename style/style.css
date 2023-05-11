@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    /* Primary */
+    --Orange: hsl(25, 97%, 53%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --container: hsl(215, 22%, 15%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > .rating-state{
+    display: none !important;
+}
+
+.main-container > .rating-state {
+    background-color: var(--container);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 24px 24px;
+    height: 375px;
+    width: 340px;
+    gap: 15px;
+}
+.main-container > .rating-state > .star-icon {
+    height: 43px;
+    width: 43px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-Blue);
+    border-radius: 50%;
+}
+.main-container > .rating-state > h1 {
+    color: var(--White);
+    font-size: 27px;
+}
+.main-container > .rating-state > .description {
+    color: var(--Light-Grey);
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 25px;
+}
+.main-container > .rating-state > .rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.main-container > .rating-state > .rating > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--Dark-Blue);
+    color: var(--Medium-Grey);
+}
+.main-container > .rating-state > .rating > label:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.main-container > .rating-state > button {
+    color: var(--White);
+    font-weight: 400;
+    border: none;
+    height: 45px;
+    letter-spacing: 3px;
+    border-radius: 22px;
+    background-color: var(--Orange);
+}
+.main-container > .rating-state > button:hover {
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: all ease-in-out .3s;
+
+}
+
+
+
+.thank-you-state {
+    background-color: var(--container);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 24px 24px;
+    height: 375px;
+    width: 340px;
+}
+.thank-you-state > .selected-radio{
+    background-color: var(--Dark-Blue);
+    color: var(--Orange);
+    padding-top: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 33px;
+    width: 180px;
+}
+.thank-you-state > h1 {
+    color: var(--White);
+    font-size: 26px;
+}
+.thank-you-state > .thank-you-description {
+    color: var(--Light-Grey);
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+}
