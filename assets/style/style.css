@@ -20,6 +20,7 @@
 }
 
 body, html {
+    overflow-y: hidden;
     height: 100vh;
     width: 100vw;
     font-family: 'Overpass', sans-serif;
@@ -34,34 +35,35 @@ body, html {
 }
 
 .main-container > .rating-state {
-    background-color: var(--container);
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 24px 24px;
-    height: 375px;
-    width: 343px;
+    height: 405px;
+    width: 370px;
     gap: 15px;
 }
 .main-container > .rating-state > .star-icon {
-    height: 56px;
-    width: 42px;
+    height: 48px;
+    width: 48px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--Dark-Blue);
     border-radius: 50%;
+    
 }
 
 .main-container > .rating-state > h1 {
     color: var(--White);
-    font-size: 27px;
+    font-size: 28px;
 }
 .main-container > .rating-state > .description {
     color: var(--Light-Grey);
-    font-size: 15px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 12px;
     line-height: 25px;
 }
 .main-container > .rating-state > .rating {
@@ -69,7 +71,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .main-container > .rating-state > .rating > label {
@@ -77,8 +79,8 @@ body, html {
     justify-content: center;
     align-items: center;
     padding-top: 5px;
-    height: 45px;
-    width: 45px;
+    height: 49px;
+    width: 49px;
     border-radius: 50%;
     font-size: 15px;
     font-weight: 400;
@@ -105,11 +107,12 @@ body, html {
     cursor: pointer;
     transition: all ease-in-out .3s;
 }
-.main-container > .rating-state > button {
+.main-container > .rating-state > .submit > button {
     color: var(--White);
     font-weight: 400;
     border: none;
     height: 45px;
+    width: 100%;
     letter-spacing: 3px;
     border-radius: 22px;
     background-color: var(--Orange);
@@ -127,38 +130,77 @@ body, html {
 }
 
 .thank-you-state {
-    background-color: var(--container);
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     flex-direction: column;
-    border-radius: 20px;
-    padding: 24px 24px 30px 24px;
-    height: 375px;
-    width: 343px;
+    border-radius: 30px;
+    gap: 25px;
+    padding: 20px 20px;
+    height: 405px;
+    width: 370px;
 }
 .thank-you-state > .result{
     background-color: var(--Dark-Blue);
     color: var(--Orange);
     padding-top: 5px;
-    margin-bottom: 5px;
     display: flex;
+    font-weight: 400;
+    margin-top: -10px;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    height: 33px;
-    width: 180px;
+    height: 35px;
+    width: 190px;
 }
 
 .thank-you-state > h1 {
     color: var(--White);
-    font-size: 26px;
+    font-size: 28px;
     display: flex;
 }
 .thank-you-state > .thank-you-description {
     color: var(--Light-Grey);
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
+    margin-top: -10px;
+}
+@media screen and (min-width: 600px){
+    .main-container > .rating-state {
+        height: 400px;
+        width: 407px;
+        padding: 31px 31px 0px 31px;
+        
+    }
+    .main-container > .rating-state > h1 {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .main-container > .rating-state > .description {
+        margin-top: -5px;
+        margin-bottom: 10px;
+        font-size: 15.5px;
+    }
+    .main-container > .rating-state > button {
+        margin-bottom: -50px !important;
+    }
+    br#appreciated {
+        display: none;
+    }
+
+    .thank-you-state { 
+        height: 400px;
+        width: 407px;
+        padding: 32px 32px 0px 32px;
+    }
+    .thank-you-state > .thank-you-description {
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    .thank-you-state > .img  {
+        margin-top: -30px;
+        margin-bottom: 8px;
+    }
 }
