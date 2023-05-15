@@ -192,8 +192,8 @@ body, html {
 
     .thank-you-state { 
         height: 400px;
-        width: 407px;
-        padding: 32px 32px 0px 32px;
+        max-width: 400px;
+        padding: 32px 15px 0px 15px;
     }
     .thank-you-state > .thank-you-description {
         font-size: 15px;
